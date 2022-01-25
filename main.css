@@ -6,13 +6,12 @@
 }
 
 body{
-    background-image:  linear-gradient(rgba(0,0,0, 0) 0%,rgba(0,0,0, 1) 100%), url("img/background.webp");
+    background-image:  linear-gradient(rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url("img/background.webp");
 }
 
 .title-section{
-    margin-top: 30vh;
-    height: 100vh;
-    color: white;
+    width: 100vw;
+    margin-top: 20vh;
     font-family: input-serif, sans-serif;
     display: flex;
     flex-direction: column;
@@ -21,13 +20,25 @@ body{
 }
 
 .title-section p.pre-title{
-    font-size: 30px;
+    font-size: 2rem;
+    color: #ffebb4;
 }
 
 .title-section h1{
-    font-size: 85px;
+    font-size: 5rem;
+    color: #ffffff;
 }
 
 .title-section p.post-title{
-    font-size: 20px;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.navbar{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18vw;
+    height: 100vh;
 }
