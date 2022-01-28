@@ -42,3 +42,26 @@ body{
     width: 18vw;
     height: 100vh;
 }
+#underline1 {
+  border: 0;
+  width: 20%;
+  color: ;
+  background-color: #ffebb4;
+  height: 5px;
+}
+#underline2 {
+  border: 0;
+  width: 40%;
+  color: ;
+  background-color: #ffebb4;
+  height: 5px;
+  margin-bottom: 2vh;
+}
+#underline3 {
+  border: 0;
+  width: 20%;
+  color: ;
+  background-color: #ffebb4;
+  height: 5px;
+  margin-top:4vh;
+}
