@@ -42,6 +42,7 @@ body{
     width: 18vw;
     height: 100vh;
 }
+
 #underline1 {
   border: 0;
   width: 20%;
@@ -52,16 +53,37 @@ body{
 #underline2 {
   border: 0;
   width: 40%;
-  color: ;
   background-color: #ffebb4;
   height: 5px;
   margin-bottom: 2vh;
 }
+
 #underline3 {
   border: 0;
   width: 20%;
-  color: ;
   background-color: #ffebb4;
   height: 5px;
   margin-top:4vh;
+}
+
+.certification{
+    color: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 12px;
+    margin-bottom: 6px;
+    font-family: input-serif, sans-serif;
+}
+
+.opening-hours{
+    font-family: input-serif, sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    text-align: left;
+    margin-top: 4vh;
+    line-height: 1.5;
 }
