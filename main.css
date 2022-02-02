@@ -9,6 +9,12 @@ body{
     background-image:  linear-gradient(rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url("img/background.webp");
 }
 
+.bodyscroll {
+  height: 100vh;
+  width: 100vw;
+  overflow: scroll;
+}
+
 .title-section{
     width: 100vw;
     margin-top: 20vh;
@@ -45,14 +51,12 @@ body{
 #underline1 {
   border: 0;
   width: 20%;
-  color: ;
   background-color: #ffebb4;
   height: 5px;
 }
 #underline2 {
   border: 0;
   width: 40%;
-  color: ;
   background-color: #ffebb4;
   height: 5px;
   margin-bottom: 2vh;
@@ -60,8 +64,82 @@ body{
 #underline3 {
   border: 0;
   width: 20%;
-  color: ;
   background-color: #ffebb4;
   height: 5px;
   margin-top:4vh;
+}
+
+.menuheader {
+  text-align: center;
+  color: white;
+  font-size: 5vw;
+  font-family: Brush Script MT, cursive;
+}
+
+.menu {
+  display: grid;
+  margin-top: 10vh;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(2, 30vw);
+}
+
+.noodlesbox {
+  grid-area: 1/2/2/3;
+}
+
+.fishiesbox {
+  grid-area: 2/1/3/2;
+}
+
+.soupbox {
+  grid-area: 3/2/4/3;
+}
+
+.noodlesbox, .fishiesbox, .soupbox {
+  border-radius: 3vw;
+  padding: 2.5vw;
+  margin: 2vw;
+  background-color: rgba(207, 146, 51, .4);
+}
+
+.s-list, .n-list,  .f-list {
+  list-style-type: none;
+  color: white;
+  font-size: 1.2vw;
+  font-family: input-serif, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.s-list li, .n-list li,  .f-list li {
+  margin-top: 1.5vw;
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+}
+
+.noodles {
+  grid-area: 1/1/2/2;
+}
+
+.fishies {
+  grid-area: 2/2/3/3;
+}
+
+.soup {
+  grid-area: 3/1/4/2;
+}
+
+.noodles, .fishies, .soup {
+  margin-top: 7vw;
+  color: #CF9233;
+  text-align: center;
+  font-size: 3vw;
+  font-family: input-serif, sans-serif;
+}
+
+.menuflex {
+  display: flex;
+  justify-content: space-between;
 }
