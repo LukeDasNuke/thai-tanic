@@ -1,0 +1,250 @@
+@import url("https://use.typekit.net/mao0kbw.css");
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    opacity: 0;
+    transition: opacity ease-in 0.4s;
+
+    background-image: url("img/background.webp");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    font-family: input-serif, sans-serif;
+    color: #ffffff;
+}
+
+.title-section{
+    width: 100vw;
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.title-section p.pre-title{
+    font-size: 2rem;
+    color: #ffebb4;
+}
+
+.title-section h1{
+    font-size: 5rem;
+}
+
+.title-section p.post-title{
+    font-size: 1.2rem;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.nav-obstructing{
+    transition: opacity ease-in-out 0.25s;
+}
+
+#navbar{
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100vh;
+    transition: width ease-in-out 0.25s, background-color ease-in-out 0.5s;
+}
+
+#navbar ul{
+    display: none;
+}
+
+#navbar ul li a.active{
+    font-weight: bold;
+    color: #ffebb4;
+}
+
+
+#navbar ul li a,
+#navbar ul li a:active{
+    color: white;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: #ffebb4;
+    text-decoration: underline;
+}
+
+.nav-open{
+    width: min(50%, 300px) !important;
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.nav-open ul{
+    display: flex !important;
+    flex-direction: column;
+    line-height: 3;
+    margin-top: 30vh;
+    list-style: none;
+    font-size: 1.2rem;
+    text-align: center;
+    justify-items: center;
+}
+
+.underline {
+    border: 0;
+    background-color: #ffebb4;
+    height: 0.2rem;
+}
+
+.underline-sm{
+    width: max(150px, 20%);
+}
+
+.underline-lg{
+    width: max(300px, 40%);
+}
+
+.certification{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 12px;
+    margin-bottom: 6px;
+    font-size: 1rem;
+}
+
+.opening-hours{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    text-align: left;
+    margin-top: 4vh;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 750px) {
+    .title-section{
+        margin-top: 16vh;
+    }
+
+    .title-section p.pre-title{
+        font-size: 1.8rem;
+    }
+
+    .title-section h1{
+        font-size: 4.5rem;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .title-section p.post-title{
+        font-size: 1.1rem;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .certification{
+        font-size: 0.86rem;
+    }
+
+    #navbar {
+        background-color: rgba(0, 0, 0, 0.0);
+    }
+
+    .nav-open{
+        width: 100% !important;
+        background-color: rgba(0, 0, 0, 0.7) !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .title-section{
+        margin-top: 18vh;
+    }
+
+    .title-section p.pre-title{
+        font-size: 1.6rem;
+    }
+
+    .title-section h1{
+        font-size: 4rem;
+    }
+
+    .title-section p.post-title{
+        font-size: 1rem;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .certification{
+        font-size: 0.75rem;
+    }
+}
+
+
+#hamburger {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    margin: 10px auto;
+    margin-right: 15px;
+    float: right;
+    transform: rotate(0deg);
+    transition: .4s ease-in-out;
+    cursor: pointer;
+}
+
+#hamburger span {
+    display: block;
+    position: absolute;
+    height: 4.5px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+#hamburger span:nth-child(1) {
+    top: 0px;
+}
+
+#hamburger span:nth-child(2),
+#hamburger span:nth-child(3) {
+    top: 10px;
+}
+
+#hamburger span:nth-child(4) {
+    top: 20px;
+}
+
+#hamburger.open {
+    margin-right: 10px;
+}
+
+#hamburger.open span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+#hamburger.open span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+#hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+#hamburger.open span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
