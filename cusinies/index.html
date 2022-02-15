@@ -3,18 +3,34 @@
 <head>
     <title>Thai Tanic Restaurant</title>
     <link rel="stylesheet" type="text/css" href="../main.css">
+    <link rel="stylesheet" type="text/css" href="../grid.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-  <div class="navbar">
-    <p>Hello</p>
+  <div id="navbar">
+    <a href="javascript:void(0)" onclick="toggleNav()">
+        <div id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </a>
+
+    <ul>
+        <li><a class="active">Home</a></li>
+        <li><a href="cuisine/index.html">Cuisine</a></li>
+        <li><a href="reviews/index.html">Reviews</a></li>
+        <li>Contact</li>
+    </ul>
   </div>
   <div class="bodyscroll">
     <div class="title-section">
         <p class="pre-title">Discover</p>
-        <hr id="underline1">
+        <hr class="underline underline-sm">
         <h1>Thai Tanic</h1>
-        <hr id="underline2">
+        <hr class="underline underline-lg">
         <h2 class="menuheader"> MENU </h2>
     </div>
 
@@ -45,7 +61,7 @@
       <div class="fishiesbox">
         <ul class="f-list">
           <li class="menuflex">
-            <p>Pla thot</p>
+            <p>Pla thot pro+</p>
             <p>$$$</p>
           <li class="menuflex">
             <p>Ho mok</p>

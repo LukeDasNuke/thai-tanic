@@ -16,13 +16,14 @@ body{
 }
 
 .title-section{
-    width: 100vw;
-    margin-top: 20vh;
-    font-family: input-serif, sans-serif;
+    margin: 20vh min(60px, 20%) 0;
     display: flex;
+    justify-items: center;
+    justify-content: center;
+    justify-self: center;
     flex-direction: column;
     align-items: center;
-    justify-items: center;
+    text-align: center;
 }
 
 .title-section p.pre-title{
@@ -32,41 +33,78 @@ body{
 
 .title-section h1{
     font-size: 5rem;
-    color: #ffffff;
+    color: white;
 }
 
 .title-section p.post-title{
     font-size: 1.2rem;
-    color: #ffffff;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
-.navbar{
-    background-color: rgba(0, 0, 0, 0.5);
+.nav-obstructing{
+    transition: opacity ease-in-out 0.25s;
+}
+
+#navbar{
+    background-color: rgba(0, 0, 0, 0.4);
     position: absolute;
     top: 0;
     left: 0;
-    width: 18vw;
+    width: 60px;
     height: 100vh;
+    transition: width ease-in-out 0.25s, background-color ease-in-out 0.5s;
 }
-#underline1 {
-  border: 0;
-  width: 20%;
-  background-color: #ffebb4;
-  height: 5px;
+
+#navbar ul{
+    display: none;
 }
-#underline2 {
-  border: 0;
-  width: 40%;
-  background-color: #ffebb4;
-  height: 5px;
-  margin-bottom: 2vh;
+
+#navbar ul li a.active{
+    font-weight: bold;
+    color: #ffebb4;
 }
-#underline3 {
-  border: 0;
-  width: 20%;
-  background-color: #ffebb4;
-  height: 5px;
-  margin-top:4vh;
+
+
+#navbar ul li a,
+#navbar ul li a:active{
+    color: white;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: #ffebb4;
+    text-decoration: underline;
+}
+
+.nav-open{
+    width: min(50%, 300px) !important;
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.nav-open ul{
+    display: flex !important;
+    flex-direction: column;
+    line-height: 3;
+    margin-top: 30vh;
+    list-style: none;
+    font-size: 1.2rem;
+    text-align: center;
+    justify-items: center;
+}
+
+.underline {
+    border: 0;
+    background-color: #ffebb4;
+    height: 0.2rem;
+}
+
+.underline-sm{
+    width: max(150px, 20%);
+}
+
+.underline-lg{
+    width: max(300px, 40%);
 }
 
 .menuheader {
@@ -76,25 +114,160 @@ body{
   font-family: Brush Script MT, cursive;
 }
 
+.certification{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 12px;
+    margin-bottom: 6px;
+    font-size: 1rem;
+}
+
+.opening-hours{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    text-align: left;
+    margin-top: 4vh;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 750px) {
+    .title-section{
+        margin-top: 16vh;
+    }
+
+    .title-section p.pre-title{
+        font-size: 1.8rem;
+    }
+
+    .title-section h1{
+        font-size: 4.5rem;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .title-section p.post-title{
+        font-size: 1.1rem;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .certification{
+        font-size: 0.86rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #navbar {
+        background-color: rgba(0, 0, 0, 0.0);
+    }
+
+    .nav-open{
+        width: 100% !important;
+        background-color: rgba(0, 0, 0, 0.7) !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .title-section{
+        margin-top: 18vh;
+    }
+
+    .title-section p.pre-title{
+        font-size: 1.6rem;
+    }
+
+    .title-section h1{
+        font-size: 4rem;
+    }
+
+    .title-section p.post-title{
+        font-size: 1rem;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .certification{
+        font-size: 0.75rem;
+    }
+
+    .menu p {
+      font-size: 3vw;
+    }
+
+    .menu h3 {
+      font-size: 5vw;
+    }
+}
+
+#hamburger {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    margin: 10px auto;
+    margin-right: 15px;
+    float: right;
+    transform: rotate(0deg);
+    transition: .4s ease-in-out;
+    cursor: pointer;
+}
+
+#hamburger span {
+    display: block;
+    position: absolute;
+    height: 4.5px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+#hamburger span:nth-child(1) {
+    top: 0px;
+}
+
+#hamburger span:nth-child(2),
+#hamburger span:nth-child(3) {
+    top: 10px;
+}
+
+#hamburger span:nth-child(4) {
+    top: 20px;
+}
+
+#hamburger.open {
+    margin-right: 10px;
+}
+
+#hamburger.open span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+#hamburger.open span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+#hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+#hamburger.open span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
 .menu {
-  display: grid;
   margin-top: 10vh;
   margin-left: 20vw;
   margin-right: 20vw;
-  grid-template-rows: repeat(3, auto);
-  grid-template-columns: repeat(2, 30vw);
-}
-
-.noodlesbox {
-  grid-area: 1/2/2/3;
-}
-
-.fishiesbox {
-  grid-area: 2/1/3/2;
-}
-
-.soupbox {
-  grid-area: 3/2/4/3;
 }
 
 .noodlesbox, .fishiesbox, .soupbox {
@@ -117,18 +290,6 @@ body{
   margin-top: 1.5vw;
   margin-left: 1.5vw;
   margin-right: 1.5vw;
-}
-
-.noodles {
-  grid-area: 1/1/2/2;
-}
-
-.fishies {
-  grid-area: 2/2/3/3;
-}
-
-.soup {
-  grid-area: 3/1/4/2;
 }
 
 .noodles, .fishies, .soup {
