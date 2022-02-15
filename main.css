@@ -6,9 +6,6 @@
 }
 
 body{
-    opacity: 0;
-    transition: opacity ease-in 0.4s;
-
     background-image: url("img/background.webp");
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -18,13 +15,28 @@ body{
     color: #ffffff;
 }
 
+a, a:active{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #ffebb4;
+    text-decoration: underline;
+}
+
+.content{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-55%);
+}
+
 .title-section{
-    width: 100vw;
-    margin-top: 20vh;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-items: center;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
 }
 
@@ -66,18 +78,6 @@ body{
     color: #ffebb4;
 }
 
-
-#navbar ul li a,
-#navbar ul li a:active{
-    color: white;
-    text-decoration: none;
-}
-
-#navbar ul li a:hover{
-    color: #ffebb4;
-    text-decoration: underline;
-}
-
 .nav-open{
     width: min(50%, 300px) !important;
     background-color: rgba(0, 0, 0, 0.7) !important;
@@ -94,18 +94,30 @@ body{
     justify-items: center;
 }
 
-.underline {
+.underline-sm{
+    width: max(150px, 20%);
+
     border: 0;
     background-color: #ffebb4;
     height: 0.2rem;
 }
 
-.underline-sm{
-    width: max(150px, 20%);
-}
-
 .underline-lg{
     width: max(300px, 40%);
+
+    border: 0;
+    background-color: #ffebb4;
+    height: 0.2rem;
+}
+
+#non-js-links{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+    margin-bottom: 6px;
+    font-size: 1rem;
 }
 
 .certification{
@@ -128,10 +140,6 @@ body{
 }
 
 @media screen and (max-width: 750px) {
-    .title-section{
-        margin-top: 16vh;
-    }
-
     .title-section p.pre-title{
         font-size: 1.8rem;
     }
@@ -151,7 +159,9 @@ body{
     .certification{
         font-size: 0.86rem;
     }
+}
 
+@media screen and (max-width: 900px) {
     #navbar {
         background-color: rgba(0, 0, 0, 0.0);
     }
@@ -163,10 +173,6 @@ body{
 }
 
 @media screen and (max-width: 500px) {
-    .title-section{
-        margin-top: 18vh;
-    }
-
     .title-section p.pre-title{
         font-size: 1.6rem;
     }
@@ -183,6 +189,10 @@ body{
 
     .certification{
         font-size: 0.75rem;
+    }
+
+    .hide-on-sm{
+        display: none;
     }
 }
 
