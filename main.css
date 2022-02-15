@@ -29,7 +29,8 @@ a:hover{
     margin: 0;
     position: absolute;
     top: 50%;
-    transform: translateY(-55%);
+    left: 50%;
+    transform: translateX(-50%) translateY(-55%);
 }
 
 .title-section{
