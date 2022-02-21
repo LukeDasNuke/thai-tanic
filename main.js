@@ -46,9 +46,9 @@ window.addEventListener('resize', () => {
 function navObstructFix(isOpen){
     document.querySelectorAll('.nav-obstructing').forEach(e => {
         if(isOpen && window.matchMedia("(max-width: 900px)").matches){
-            e.style.opacity = '0';
+            e.style.display = 'none';
             return;
         }
-        e.style.opacity = '1';
+        e.style.display = 'inline';
     });
 }

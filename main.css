@@ -6,7 +6,7 @@
 }
 
 body{
-    background-image: url("img/background.webp");
+    background-image: linear-gradient(rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url("img/background.webp");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
