@@ -8,109 +8,116 @@
 </head>
 
 <body>
-<div id="navbar">
-    <a href="javascript:void(0)" onclick="toggleNav()">
-        <div id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </a>
+    <div id="navbar">
+        <!-- Hamburger meny -->
+        <a href="javascript:void(0)" onclick="toggleNav()">
+            <div id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </a>
 
-    <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../cuisine/index.html">Cuisine</a></li>
-        <li><a class="active">Reviews</a></li>
-        <li>Contact</li>
-    </ul>
-</div>
-
-<section class="content nav-obstructing">
-    <div class="title-section">
-        <p class="pre-title">Discover</p>
-        <hr class="underline-sm">
-        <h1>Thai Tanic</h1>
-        <hr class="underline-lg">
-        <br>
+        <!-- Länkar i navbar -->
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../cuisine/index.html">Cuisine</a></li>
+            <li><a class="active">Reviews</a></li>
+            <li>Contact</li>
+        </ul>
     </div>
 
-    <div class="reviews">
-        <div class="reviewbox">
-            <p class="heading">Amazing Rating</p>
-            <span class="fa fa-star"></span>
-            <p>4.9 average based on 254 reviews.</p>
-            <hr style="border:3px solid #ffebb4">
+    <section class="content nav-obstructing">
+        <!-- Titel-delen -->
+        <div class="title-section">
+            <p class="pre-title">Discover</p>
+            <hr class="underline-sm">
+            <h1>Thai Tanic</h1>
+            <hr class="underline-lg">
+            <br>
+        </div>
 
-            <div class="row">
-                <div class="side">
-                    <div>5 star</div>
-                </div>
-                <div class="middle">
-                    <div class="bar-container">
-                        <div class="bar-5"></div>
+        <!-- Del med alla reviews -->
+        <div class="reviews">
+            <div class="reviewbox">
+                <!-- Titel för reviews -->
+                <p class="heading">Amazing Rating</p>
+                <span class="fa fa-star"></span>
+                <p>4.9 average based on 254 reviews.</p>
+                <hr style="border:3px solid #ffebb4">
+
+                <!-- Reviews-låda -->
+                <div class="row">
+                    <div class="side">
+                        <div>5 star</div>
                     </div>
-                </div>
-                <div class="side right">
-                    <div>169</div>
-                </div>
-                <div class="side">
-                    <div>4 star</div>
-                </div>
-                <div class="middle">
-                    <div class="bar-container">
-                        <div class="bar-4"></div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-5"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="side right">
-                    <div>85</div>
-                </div>
-                <div class="side">
-                    <div>3 star</div>
-                </div>
-                <div class="middle">
-                    <div class="bar-container">
-                        <div class="bar-3"></div>
+                    <div class="side right">
+                        <div>169</div>
                     </div>
-                </div>
-                <div class="side right">
-                    <div>12</div>
-                </div>
-                <div class="side">
-                    <div>2 star</div>
-                </div>
-                <div class="middle">
-                    <div class="bar-container">
-                        <div class="bar-2"></div>
+                    <div class="side">
+                        <div>4 star</div>
                     </div>
-                </div>
-                <div class="side right">
-                    <div>50</div>
-                </div>
-                <div class="side">
-                    <div>1 star</div>
-                </div>
-                <div class="middle">
-                    <div class="bar-container">
-                        <div class="bar-1"></div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-4"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="side right">
-                    <div>3000</div>
+                    <div class="side right">
+                        <div>85</div>
+                    </div>
+                    <div class="side">
+                        <div>3 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-3"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>12</div>
+                    </div>
+                    <div class="side">
+                        <div>2 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-2"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>50</div>
+                    </div>
+                    <div class="side">
+                        <div>1 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-1"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>3000</div>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Navigation som endast visas om javascript inte laddas -->
+    <div id="non-js-links">
+        <p><a href="../index.html">Home</a> | <a href="../cuisine/index.html">Cuisine</a></p>
     </div>
-</section>
 
-<div id="non-js-links">
-    <p><a href="../index.html">Home</a> | <a href="../cuisine/index.html">Cuisine</a></p>
-</div>
+    <div class="certification">
+        <p>Certified michilini fishi</p>
+    </div>
 
-<div class="certification">
-    <p>Certified michilini fishi</p>
-</div>
-
-<script src="../main.js"></script>
+    <script src="../main.js"></script>
 </body>
 </html>

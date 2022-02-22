@@ -5,9 +5,9 @@ documentReady(() => {
     // Set opacity to 0 for fade-in
     document.body.style.opacity = '0';
 
-    // Fade-in after 300ms
-    delay(300).then(() => {
-        document.body.style.transition = "opacity ease-in 0.4s";
+    // Fade-in after 200ms
+    delay(200).then(() => {
+        document.body.style.transition = "opacity ease-in 0.15s";
         document.body.style.opacity = '1'
     });
 });

@@ -15,6 +15,7 @@ body{
     color: #ffffff;
 }
 
+/* Länk-styling */
 a, a:active{
     color: white;
     text-decoration: none;
@@ -25,6 +26,7 @@ a:hover{
     text-decoration: underline;
 }
 
+/* Placera huvud-content i mitten */
 .content{
     margin: 0;
     position: absolute;
@@ -56,10 +58,7 @@ a:hover{
     margin-right: 20%;
 }
 
-.nav-obstructing{
-    transition: opacity ease-in-out 0.25s;
-}
-
+/* Navbar-styling (ej öppen) */
 #navbar{
     background-color: rgba(0, 0, 0, 0.4);
     position: absolute;
@@ -74,11 +73,13 @@ a:hover{
     display: none;
 }
 
+/* Visa tydligt vilken link som är aktiv */
 #navbar ul li a.active{
     font-weight: bold;
     color: #ffebb4;
 }
 
+/* Expandera navbar när den är öppen */
 .nav-open{
     width: min(50%, 300px) !important;
     background-color: rgba(0, 0, 0, 0.7) !important;
@@ -95,6 +96,7 @@ a:hover{
     justify-items: center;
 }
 
+/* Linjer som separerar olika element */
 .underline-sm{
     width: max(150px, 20%);
 
@@ -111,6 +113,7 @@ a:hover{
     height: 0.2rem;
 }
 
+/* Style länkarna som endast visas när javascript inte laddas */
 #non-js-links{
     position: absolute;
     bottom: 0;
@@ -173,7 +176,9 @@ a:hover{
     }
 }
 
+/* Mobilanpassning */
 @media screen and (max-width: 500px) {
+    /* Minska font storlekar för att passa bättre */
     .title-section p.pre-title{
         font-size: 1.6rem;
     }
@@ -192,18 +197,18 @@ a:hover{
         font-size: 0.75rem;
     }
 
+    /* Göm alla element som ska gömmas på små skärmar */
     .hide-on-sm{
         display: none;
     }
 }
 
-
+/* Hamburger styling */
 #hamburger {
     width: 30px;
     height: 20px;
     position: relative;
-    margin: 10px auto;
-    margin-right: 15px;
+    margin: 10px 15px 10px auto;
     float: right;
     transform: rotate(0deg);
     transition: .4s ease-in-out;
@@ -224,7 +229,7 @@ a:hover{
 }
 
 #hamburger span:nth-child(1) {
-    top: 0px;
+    top: 0;
 }
 
 #hamburger span:nth-child(2),
@@ -242,7 +247,7 @@ a:hover{
 
 #hamburger.open span:nth-child(1) {
     top: 18px;
-    width: 0%;
+    width: 0;
     left: 50%;
 }
 
@@ -256,6 +261,6 @@ a:hover{
 
 #hamburger.open span:nth-child(4) {
     top: 18px;
-    width: 0%;
+    width: 0;
     left: 50%;
 }

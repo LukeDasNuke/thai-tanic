@@ -11,7 +11,6 @@
     color: orange;
 }
 
-/* Three column layout */
 .side {
     float: left;
     width: 15%;
@@ -24,19 +23,17 @@
     margin-top: 10px;
 }
 
-/* Place text to the right */
 .right {
     text-align: right;
 }
 
-/* Clear floats after the columns */
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
 
-/* The bar container */
+/* Container runt alla barsen */
 .bar-container {
     width: 100%;
     background-color: #f1f1f1;
@@ -44,25 +41,24 @@
     color: white;
 }
 
-/* Individual bars */
+/* Styling av de olika barsen */
 .bar-5 {width: 60%; height: 18px; background-color: #04AA6D;}
 .bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
 .bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
 .bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
 .bar-1 {width: 15%; height: 18px; background-color: #f44336;}
 
-/* Responsive layout - make the columns stack on top of each other instead of next to each other */
-
 .reviews{
     margin: auto;
     width: 408px;
 }
 
+/* Mobilanpassning */
 @media (max-width: 650px) {
     .side, .middle {
         width: 100%;
     }
-    /* Hide the right column on small screens */
+    /* Göm höger-kolumnen */
     .right {
         display: none;
     }
@@ -72,8 +68,7 @@
     }
 }
 
-.reviewbox p,
-.heading {
+.reviewbox p, .heading {
     color: white;
     text-align: center;
 }
